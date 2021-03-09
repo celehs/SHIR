@@ -1,0 +1,33 @@
+Package: SHIR
+Title: SHIR: Data-Shielding High-dimensional Integrative Regression
+Version: 0.1.0
+Authors@R: 
+    person(given = "Molei",
+           family = "Liu",
+           role = c("aut"),
+           email = "molei_liu@g.harvard.edu")
+    person(given = "Tianxi",
+           family = "Cai",
+           role = c("aut"),
+           email = "first.last@example.com",
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+    person(given = "Clara-Lea",
+           family = "Bonzel",
+           role = c("aut"),
+           email = "clbonzel@hsph.harvard.edu")
+    person(family = "PARSE LTD", role = c("aut","cre"), email = "software@parse-health.org")
+Description: What the package does (one paragraph).
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Suggests: 
+    MASS,
+    grplasso,
+    glmnet,
+    stats,
+    testthat,
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr

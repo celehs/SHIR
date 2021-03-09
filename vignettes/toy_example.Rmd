@@ -1,0 +1,87 @@
+---
+title: "Toy Example"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{toy_example}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+We propose a simple example in which we apply SHIR to a generated dataset
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+load the library
+```{r setup}
+#library(SHIR)
+```
+
+load the simulated dataset
+```{r , include = FALSE}
+#simu_data <- load("https://raw.githubusercontent.com/celehs/SHIR/master/data-raw/dataSHIR.rda")
+```
+
+X are the individual covariates matrices, Y is the individual response vector
+```{r , include = FALSE}
+#X_lst <- simu_data$X
+#Y_lst <- simu_data$Y
+```
+
+Fit and derive summary data at each local site:
+```{r , include = FALSE}
+# # number of sites:
+# M <- length(X_lst)
+# 
+# # vector for sample size of the local sites:
+# length_lst <- c()
+# 
+# # list for derived hessian matrices:
+# I_lst <- vector('list', M)
+# 
+# # list for derived gradient vectors:
+# U_lst <- vector('list', M)
+# 
+# # list for derived lasso estimators:
+# beta_lst <- vector('list', M)
+# 
+# for (m in 1:M){
+#   Y <- Y_lst[[m]]
+#   X <- X_lst[[m]]
+#   
+#   # Locally fit and derive the individual data at site m:
+#   
+#   local_summary_m <- Local_fit(Y, X, lambda_lst = 0.1 * c(3:30) * sqrt((log(p)) / n))
+#   
+#   I_lst[[m]] <- local_summary_m$hessian
+#   U_lst[[m]] <- local_summary_m$gradient
+#   beta_lst[[m]] <- local_summary_m$beta
+# }
+```
+
+Aggregate the derived data:
+```{r , include = FALSE}
+# SHIR_train <- SHIR_fit(I_lst, U_lst, length_lst, 
+#                        lambda_lst = sqrt(n * log(p)) * 0.3 * c(5:30), 
+#                        lambda_g_lst = sqrt(n * (log(p) + M)) * 0.3 * (5:30), 
+#                        tune = 'BIC')
+# 
+# # Fitted beta (the m-th column loads the fitted beta for the m-th site, 
+# #              the first row is the intercepts):
+# 
+# SHIR_train$min.beta
+```
+
+To obtain the fitted mean effect mu:
+```{r , include = FALSE}
+# rowMeans(SHIR_train$min.beta)
+```
+
+To obtain the fitted heterogeneous effect alpha (the m-th column loads alpha for the m-th site):
+```{r , include = FALSE}
+# SHIR_train$min.beta - rowMeans(SHIR_train$min.beta)
+```
