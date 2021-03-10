@@ -11,9 +11,9 @@
 #' @export
 Local_fit <- function(Y, X, lambda_lst = NULL){
 
-  cv.result <- cv.glmnet(X, Y, family = 'binomial', lambda = lambda_lst)
+  cv.result <- glmnet::cv.glmnet(X, Y, family = 'binomial', lambda = lambda_lst)
   lambda.cv <- cv.result$lambda.min
-  model <- glmnet(X, Y, family = 'binomial', lambda = lambda.cv)
+  model <- glmnet::glmnet(X, Y, family = 'binomial', lambda = lambda.cv)
   beta_fit <- c(as.vector(model$a0), as.vector(model$beta))
 
   n <- length(Y)

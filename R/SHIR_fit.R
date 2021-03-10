@@ -85,9 +85,9 @@ SHIR_fit <- function(H_lst, d_lst, n_lst,
           return(lambda_g / lambda)
         }
       }
-      invisible(capture.output(
-        fit_result <- grplasso(X_all, y = Y_all, index = indx_lst, standardize = F,
-                               center = FALSE, lambda = lambda, penscale = penscale, model = LinReg(),
+      invisible(utils::capture.output(
+        fit_result <- grplasso::grplasso(X_all, y = Y_all, index = indx_lst, standardize = F,
+                               center = FALSE, lambda = lambda, penscale = penscale, model = grplasso::LinReg(),
                                coef.init = initial)))
       fit_coef <- fit_result$coefficients
       fit_norm <- fit_result$norms.pen

@@ -3,4 +3,3 @@
 export(Local_fit)
 export(SHIR_fit)
 importFrom(stats,rbinom)
-importFrom(utils,capture.output)

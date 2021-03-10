@@ -35,7 +35,7 @@ AR_cov <- function(p, acorr){
 # mu: vector of the true mu (homogeneous effect).
 # alpha: list of true alpha (heterogeneous effect) of the local sites.
 
-
+#' @importFrom stats rbinom
 Generate_data <- function(n = 400, p = 400, M = 4, magn_mu = 0.5, magn_alpha = 0.35){
 
   X_lst <- vector('list', M)
@@ -91,13 +91,13 @@ Generate_data <- function(n = 400, p = 400, M = 4, magn_mu = 0.5, magn_alpha = 0
     r <- r_lst[m]
     gamma_coef <- c()
     for (t in 1:s) {
-      gamma_coef <- cbind(gamma_coef, r * rbinom(p - s, 1, prop))
+      gamma_coef <- cbind(gamma_coef, r * stats::rbinom(p - s, 1, prop))
     }
     Sigma_remain <- AR_cov(p - s, r)
     Sigma_X <- rbind(cbind(diag(rep(1, s)) + t(gamma_coef) %*% Sigma_remain %*% gamma_coef,
                            t(Sigma_remain %*% gamma_coef)),
                      cbind(Sigma_remain %*% gamma_coef, Sigma_remain))
-    X <- mvrnorm(n, rep(0, p), Sigma_X)
+    X <- MASS::mvrnorm(n, rep(0, p), Sigma_X)
     odds <- exp(cbind(rep(1, n), X) %*% beta_true_lst[[m]])
     p_vec <- odds / (1 + odds)
     Y <- rbinom(n, 1, p_vec)
