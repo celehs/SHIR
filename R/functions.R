@@ -27,7 +27,7 @@ AR_cov <- function(p, acorr){
 # magn_alpha: magnitude of the heterogeneous effect
 
 
-### Value ###
+### Output ###
 
 # X_lst: list of individual covariates matrices of the local sites.
 # Y_lst: list of individual response vectors of the local sites.
