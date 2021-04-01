@@ -30,20 +30,23 @@ summary-statistics-based integrating procedure, accommodates between
 study heterogeneity in both the covariate distribution and model
 parameters, and attains consistent variable selection.
 
-## Algorithm description
+## Flowchart
 
-![Algorithm flowchart](./figures/Flowchart_SHIR.png)
+![Algorithm
+flowchart](./figures/Flowchart_SHIR.png)
 
 ## Installation
 
-You can install the stable version of SHIR from
-[CRAN](https://CRAN.R-project.org) with:
+<!-- You can install the stable version of SHIR from [CRAN](https://CRAN.R-project.org) with: -->
 
-``` r
-install.packages("SHIR")
-```
+<!-- ``` r -->
 
-And the development version from [GitHub](https://github.com/) with:
+<!-- install.packages("SHIR") -->
+
+<!-- ``` -->
+
+The development version of this package can be installed from
+[GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
@@ -52,11 +55,12 @@ devtools::install_github("celehs/SHIR")
 
 ## Getting started
 
-Follow the main steps displayed in the example, in which we apply SHIR
-to a simulated dataset.
+Follow the main steps displayed in the
+[example](file:///private/var/folders/g6/tcrpz9115rbfkpj7vtp_sx5w0000gn/T/RtmpGgAvhL/preview-1649410ad759.dir/run_example.html),
+in which we apply SHIR to a simulated dataset.
 
 ## Citation
 
 Cai, T., Liu, M., & Xia, Y. (2019). Individual Data Protected
 Integrative Regression Analysis of High-dimensional Heterogeneous Data.
-arXiv: Methodology.
+[arXiv: Methodology](https://arxiv.org/abs/1902.06115).

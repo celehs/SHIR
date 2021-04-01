@@ -7,8 +7,7 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-We propose a simple example in which we apply SHIR to a generated dataset
-
+We propose a simple example in which we apply SHIR to a generated dataset that mimicks data from M=4 sites. We show how to fit and derive summary data at each local site, and then aggregate the derived data. 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
@@ -16,50 +15,51 @@ knitr::opts_chunk$set(
 )
 ```
 
-load the library
+Load the library:
 ```{r setup}
 library(SHIR)
 ```
 
-load the simulated dataset
+Load the simulated dataset:
 ```{r}
 data(simu_data)
 ```
 
-
-X are the individual covariates matrices, Y is the individual response vector
+The variables X are the individual covariates matrices, Y is the individual response vector:
 ```{r}
-data(simu_data)
 X_lst <- simu_data$X
 Y_lst <- simu_data$Y
 ```
 
-Fit and derive summary data at each local site:
-```{r echo = T, results = 'hide'}
-#parameters to generate the data
+```{r echo = T, include = FALSE}
+#parameters used for generating the data
 n <- 400
 p <- 400
+```
 
-# number of sites:
+Number of sites:
+```{r}
 M <- length(X_lst)
+```
 
-# vector for sample size of the local sites:
+Vector for sample size of the local sites:
+```{r}
 length_lst <- c()
+```
 
-# list for derived hessian matrices:
+Initialize the lists of the derived hessian matrices, gradient vectors and lasso estimators respectively:
+```{r}
 I_lst <- vector('list', M)
-
-# list for derived gradient vectors:
 U_lst <- vector('list', M)
-
-# list for derived lasso estimators:
 beta_lst <- vector('list', M)
+```
 
+Locally fit and derive the individual data at site m:
+```{r}
+system.time(
 for (m in 1:M){
   Y <- Y_lst[[m]]
   X <- X_lst[[m]]
-
-  # Locally fit and derive the individual data at site m:
 
   local_summary_m <- Local_fit(Y, X, lambda_lst = 0.1 * c(3:30) * sqrt((log(p)) / n))
 
@@ -67,7 +67,16 @@ for (m in 1:M){
   U_lst[[m]] <- local_summary_m$gradient
   beta_lst[[m]] <- local_summary_m$beta
 }
+)
 ```
+
+
+
+
+
+
+
+
 
 Aggregate the derived data:
 ```{r echo = T, results = 'hide'}
