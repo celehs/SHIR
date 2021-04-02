@@ -61,4 +61,5 @@ in which we apply SHIR to a simulated dataset.
 
 ## Citation
 
-Cai, T., Liu, M., & Xia, Y. (2021). Individual data protected integrative regression analysis of high-dimensional heterogeneous data. Journal of the American Statistical Association, (just-accepted), 1-34. https://www.tandfonline.com/doi/abs/10.1080/01621459.2021.1904958
+Cai, T., Liu, M., & Xia, Y. (2021). Individual data protected integrative regression analysis of high-dimensional heterogeneous data. Journal of the American Statistical Association, (just-accepted), 1-34. 
+https://www.tandfonline.com/doi/abs/10.1080/01621459.2021.1904958
