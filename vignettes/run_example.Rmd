@@ -1,5 +1,5 @@
 ---
-title: "Example"
+title: "Example on a simulated dataset"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{run_example}
@@ -76,6 +76,11 @@ Aggregate the derived data:
 SHIR_train <- SHIR_fit(I_lst, U_lst, length_lst,
                        lambda_lst = sqrt(n * log(p)) * 0.3 * c(4:30),
                        lambda_g_lst = c(0.75, 1), tune = 'BIC')
+```
+
+# For convenience, one can also use the defaul parameters:
+```{r echo = T, results = 'hide'}
+SHIR_train <- SHIR_fit(I_lst, U_lst, length_lst)
 ```
 
 Fitted beta. The m-th column loads the fitted beta for the m-th site, the first row displays the intercepts:

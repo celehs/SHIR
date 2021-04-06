@@ -130,6 +130,7 @@ Cal_GIC_pool <- function(U_lst, I_lst, X_enlarge, fit_coef, length_lst, lambda_g
   S_mu <- which(mu != 0)
   S_full <- which(fit_coef != 0)
   H_S <- t(X_enlarge[ ,S_full]) %*% X_enlarge[ ,S_full]
+  #H_S <- crossprod(X_enlarge[ ,S_full])
   partial <- diag(0, length(S_full), length(S_full))
   if (length(S_alpha) != 0){
     for (t in 1:length(S_alpha)) {
