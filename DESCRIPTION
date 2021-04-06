@@ -17,6 +17,7 @@ Depends:
     R (>= 3.5.0)
 Suggests: 
     MASS,
+    Matrix,
     grplasso,
     glmnet,
     stats,

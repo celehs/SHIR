@@ -4,7 +4,14 @@
 \alias{SHIR_fit}
 \title{SHIR_fit: aggregate the locally derived summary data using the proposed method in SHIR paper.}
 \usage{
-SHIR_fit(H_lst, d_lst, n_lst, lambda_lst, lambda_g_lst, tune = "BIC")
+SHIR_fit(
+  H_lst,
+  d_lst,
+  n_lst,
+  lambda_lst = NULL,
+  lambda_g_lst = NULL,
+  tune = "BIC"
+)
 }
 \arguments{
 \item{H_lst}{list of locally derived Hessian matrix}
@@ -14,13 +21,16 @@ SHIR_fit(H_lst, d_lst, n_lst, lambda_lst, lambda_g_lst, tune = "BIC")
 \item{n_lst}{vector of the sample sizes at local sites}
 
 \item{lambda_lst}{candidate set of the tuning parameter for mu,
-(corresponds to sqrt(N)lambda in the SHIR paper)}
+(corresponds to sqrt(N)lambda in the SHIR paper)
+If not specified or specified as Null by the user, it will be set as 0.3*c(5:25)sqrt(nlog(p)).}
 
 \item{lambda_g_lst}{candidate set of the tuning parameter for alpha,
-(corresponds to sqrt(N)*lambdalambda_g in the SHIR paper)}
+(corresponds to sqrt(N)*lambdalambda_g in the SHIR paper)
+If not specified or specified as Null by the user, it will be set as c(0.6,0.9).}
 
 \item{tune}{the information criterion used for model selection:
-options include 'AIC', 'BIC' and 'RIC', which put different weights on the degree of freedom.}
+options include 'AIC', 'BIC', 'mBIC' and 'RIC', which put different weights on the degree of freedom.
+If not specified by the user, it will be set as 'BIC'.}
 }
 \value{
 min.lambda: the selected tuning parameters with the minimum information criterion

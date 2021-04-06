@@ -2,4 +2,8 @@
 
 export(Local_fit)
 export(SHIR_fit)
+import(Matrix)
+importFrom(Matrix,bdiag)
+importFrom(grplasso,LinReg)
+importFrom(grplasso,grplasso)
 importFrom(stats,rbinom)
