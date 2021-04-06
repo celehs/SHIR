@@ -22,7 +22,7 @@ test_that("Local_fit works", {
     length_lst <- c(length_lst, length(Y))
   }
 
-  expect_equal(round(I_lst[[m]][1,1],3), 83.475)
+  expect_equal(round(I_lst[[m]][1,1]), 83)
 })
 
 
@@ -52,5 +52,5 @@ test_that("SHIR_fit works", {
 
   SHIR_train <- SHIR_fit(I_lst, U_lst, length_lst)
 
-  expect_equal(round(SHIR_train$min.beta[1],3), -0.018)
+  expect_equal(round(SHIR_train$min.beta[1],2), -0.02)
 })
