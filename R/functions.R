@@ -110,9 +110,8 @@ Generate_data <- function(n = 400, p = 400, M = 4, magn_mu = 0.5, magn_alpha = 0
 }
 
 
-
+#' @import Matrix
 # Function to tune (internal)
-
 Cal_GIC_pool <- function(U_lst, I_lst, X_enlarge, fit_coef, length_lst, lambda_g,
                          type = 'BIC'){
   M <- length(U_lst)
