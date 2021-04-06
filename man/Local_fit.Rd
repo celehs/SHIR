@@ -11,7 +11,8 @@ Local_fit(Y, X, lambda_lst = NULL)
 
 \item{X}{individual covariates matrices}
 
-\item{lambda_lst}{candidate set of tuning parameters, NULL for choose the default range in glmnet}
+\item{lambda_lst}{candidate set of tuning parameters,
+If not specified or specified as Null by the user, choose the default range in glmnet.}
 }
 \value{
 hessian: derived Hessian matrix

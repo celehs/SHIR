@@ -1,8 +1,8 @@
 ---
-title: "Toy Example"
+title: "Example on a simulated dataset"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{toy_example}
+  %\VignetteIndexEntry{run_example}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -18,6 +18,7 @@ knitr::opts_chunk$set(
 Load the library:
 ```{r setup}
 library(SHIR)
+library(Matrix)
 ```
 
 Load the simulated dataset:
@@ -61,31 +62,27 @@ for (m in 1:M){
   Y <- Y_lst[[m]]
   X <- X_lst[[m]]
 
-  local_summary_m <- Local_fit(Y, X, lambda_lst = 0.1 * c(3:30) * sqrt((log(p)) / n))
-
+  local_summary_m <- Local_fit(Y, X, lambda_lst = 0.1 * c(4:20) * sqrt((log(p)) / n))
+  
   I_lst[[m]] <- local_summary_m$hessian
   U_lst[[m]] <- local_summary_m$gradient
   beta_lst[[m]] <- local_summary_m$beta
+  length_lst <- c(length_lst, length(Y))
 }
 )
 ```
 
-
-
-
-
-
-
-
-
 Aggregate the derived data:
-```{r echo = T, results = 'hide'}
+```{r}
 SHIR_train <- SHIR_fit(I_lst, U_lst, length_lst,
-                       lambda_lst = sqrt(n * log(p)) * 0.3 * c(5:30),
-                       lambda_g_lst = sqrt(n * (log(p) + M)) * 0.3 * (5:30),
-                       tune = 'BIC')
+                       lambda_lst = sqrt(n * log(p)) * 0.3 * c(4:30),
+                       lambda_g_lst = c(0.75, 1), tune = 'BIC')
 ```
 
+Or for convenient implementation:
+```{r echo = T, results = 'hide'}
+SHIR_train <- SHIR_fit(I_lst, U_lst, length_lst)
+```
 
 Fitted beta. The m-th column loads the fitted beta for the m-th site, the first row displays the intercepts:
 ```{r}
