@@ -53,7 +53,7 @@ devtools::install_github("celehs/SHIR")
 ```
 ## Getting started
 
-Follow the main steps displayed in the [example](file:///private/var/folders/g6/tcrpz9115rbfkpj7vtp_sx5w0000gn/T/RtmpGgAvhL/preview-1649410ad759.dir/run_example.html), in which we apply SHIR to a simulated dataset.
+Follow the main steps displayed in the [example](file:///Users/clara-lea/Documents/GitHub/SHIR/docs/articles/run_example.html), in which we apply SHIR to a simulated dataset.
 
 
 ## Citation

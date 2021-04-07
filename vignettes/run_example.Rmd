@@ -72,15 +72,20 @@ for (m in 1:M){
 ```
 
 Aggregate the derived data:
-```{r echo = T, results = 'hide'}
+```{r, eval = FALSE}
 SHIR_train <- SHIR_fit(I_lst, U_lst, length_lst,
                        lambda_lst = sqrt(n * log(p)) * 0.3 * c(4:30),
                        lambda_g_lst = c(0.75, 1), tune = 'BIC')
+
 ```
 
-# For convenience, one can also use the defaul parameters:
-```{r echo = T, results = 'hide'}
+For convenience, one can also use the default parameters:
+```{r}
+system.time(
+invisible(
 SHIR_train <- SHIR_fit(I_lst, U_lst, length_lst)
+)
+)
 ```
 
 Fitted beta. The m-th column loads the fitted beta for the m-th site, the first row displays the intercepts:
