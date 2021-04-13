@@ -43,4 +43,6 @@ library(SHIR)
 
 ## References
 
-Cai, T., Liu, M., & Xia, Y. (2021). Individual data protected integrative regression analysis of high-dimensional heterogeneous data. Journal of the American Statistical Association, (just-accepted), 1-34.
+Cai, T., Liu, M., & Xia, Y. (2019). Individual Data Protected
+Integrative Regression Analysis of High-dimensional Heterogeneous Data.
+arXiv: Methodology.
