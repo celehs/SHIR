@@ -1,7 +1,7 @@
 #' Local_fit: Fit lasso and derive summary statistics at each local site.
 #'
 #' @param Y individual response vector
-#' @param X individual covariates matrices
+#' @param X individual covariates matrix
 #' @param lambda_lst candidate set of tuning parameters
 #' If not specified or specified as Null by the user, choose the default range in glmnet.
 #'
