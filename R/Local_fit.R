@@ -1,8 +1,9 @@
 #' Local_fit: Fit lasso and derive summary statistics at each local site.
 #'
 #' @param Y individual response vector
-#' @param X individual covariates matrices
-#' @param lambda_lst candidate set of tuning parameters, NULL for choose the default range in glmnet
+#' @param X individual covariates matrix
+#' @param lambda_lst candidate set of tuning parameters
+#' If not specified or specified as Null by the user, choose the default range in glmnet.
 #'
 #' @return hessian: derived Hessian matrix
 #' @return gradient: derived gradient vector
@@ -10,7 +11,6 @@
 #'
 #' @export
 Local_fit <- function(Y, X, lambda_lst = NULL){
-
   cv.result <- glmnet::cv.glmnet(X, Y, family = 'binomial', lambda = lambda_lst)
   lambda.cv <- cv.result$lambda.min
   model <- glmnet::glmnet(X, Y, family = 'binomial', lambda = lambda.cv)
@@ -25,3 +25,4 @@ Local_fit <- function(Y, X, lambda_lst = NULL){
 
   return(list(hessian = I_mat, gradient = U, beta = beta_fit))
 }
+

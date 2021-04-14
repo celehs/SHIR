@@ -27,7 +27,7 @@ AR_cov <- function(p, acorr){
 # magn_alpha: magnitude of the heterogeneous effect
 
 
-### Value ###
+### Output ###
 
 # X_lst: list of individual covariates matrices of the local sites.
 # Y_lst: list of individual response vectors of the local sites.
@@ -110,50 +110,50 @@ Generate_data <- function(n = 400, p = 400, M = 4, magn_mu = 0.5, magn_alpha = 0
 }
 
 
-
+#' @import Matrix
 # Function to tune (internal)
-Cal_GIC_pool <- function(U_lst, I_lst, X_all, fit_coef, length_lst, lambda_g,
-                         intercept = T, type = 'BIC'){
+Cal_GIC_pool <- function(U_lst, I_lst, X_enlarge, fit_coef, length_lst, lambda_g,
+                         type = 'BIC'){
   M <- length(U_lst)
-  if (intercept == T){
+  p <- length(I_lst[[1]][1, ]) - 1
+  mu <- fit_coef[1:(p + 1)]
+  beta_fit <- c()
+  alpha_fit <- c()
 
-    p <- length(I_lst[[1]][1, ]) - 1
-    mu <- fit_coef[1:(p + 1)]
-    beta_fit <- mu
-    alpha_fit <- c()
-
-    for (i in 2:M){
-      beta_fit <- beta_fit - fit_coef[((i - 1) * p + i):(i * p + i)]
-      alpha_fit <- cbind(alpha_fit, fit_coef[((i - 1) * p + i + 1):(i * p + i)])
-    }
-    for (i in 2:M) {
-      beta_fit <- cbind(beta_fit, mu +
-                          fit_coef[((i - 1) * p + i):(i * p + i)])
-    }
-    norm_lst <- sqrt(rowSums(alpha_fit^2))
-    S_alpha <- which(norm_lst != 0)
-    S_mu <- which(mu != 0)
-    S_full <- which(fit_coef != 0)
-    H_S <- t(X_all[ ,S_full]) %*% X_all[ ,S_full]
-    partial <- diag(0, length(S_full), length(S_full))
-    if (length(S_alpha) != 0){
-      for (t in 1:length(S_alpha)) {
-        j <- S_alpha[t]
-        partial_j <- t + 1 + length(S_mu) + (length(S_alpha) + 1) * c(0:(M-2))
-        partial[partial_j, partial_j] <- lambda_g / norm_lst[j] *
-          (diag(1, M - 1, M - 1) - alpha_fit[j,] %*% t(alpha_fit[j,]) / norm_lst[j]^2)
-      }
-    }
-    df <- sum(diag(solve(H_S + partial) %*% H_S))
+  for (i in 2:(M + 1)){
+    beta_fit <- cbind(beta_fit, mu + fit_coef[((i - 1) * p + i):(i * p + i)])
+    alpha_fit <- cbind(alpha_fit, fit_coef[((i - 1) * p + i):(i * p + i)])
   }
+
+  norm_lst <- sqrt(rowSums(alpha_fit^2))
+  S_alpha <- which(norm_lst != 0)
+  S_mu <- which(mu != 0)
+  S_full <- which(fit_coef != 0)
+  H_S <- t(X_enlarge[ ,S_full]) %*% X_enlarge[ ,S_full]
+  #H_S <- crossprod(X_enlarge[ ,S_full])
+  partial <- diag(0, length(S_full), length(S_full))
+  if (length(S_alpha) != 0){
+    for (t in 1:length(S_alpha)) {
+      j <- S_alpha[t]
+      partial_j <- t + length(S_mu) + length(S_alpha) * c(0:(M - 1))
+      partial[partial_j, partial_j] <- lambda_g / norm_lst[j] *
+        (diag(1, M, M) - alpha_fit[j,] %*% t(alpha_fit[j,]) / norm_lst[j]^2)
+    }
+  }
+
+  df <- sum(diag(solve(H_S + partial) %*% H_S))
+  #print(df)
+
   GIC <- 0
   for (i in 1:M){
-    GIC <- GIC + t(beta_fit[,i]) %*% I_lst[[i]] %*% beta_fit[,i] -
-      2 * t(beta_fit[,i]) %*% U_lst[[i]]
+    GIC <- GIC + t(beta_fit[,i]) %*% I_lst[[i]] %*% beta_fit[,i] - 2 * t(beta_fit[,i]) %*% U_lst[[i]]
   }
 
   if (type == 'BIC'){
     GIC <- GIC / sum(length_lst) + df * log(sum(length_lst)) / sum(length_lst)
+  }
+  if (type == 'mBIC'){
+    GIC <- GIC / sum(length_lst) + df * log(max(exp(1), log(M * p))) * log(sum(length_lst)) / sum(length_lst)
   }
   if (type == 'AIC'){
     GIC <- GIC / sum(length_lst) + df * 2 / sum(length_lst)
