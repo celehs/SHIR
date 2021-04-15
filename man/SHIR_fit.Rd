@@ -25,7 +25,7 @@ SHIR_fit(
 If not specified or specified as Null by the user, it will be set as 0.3*c(5:25)sqrt(nlog(p)).}
 
 \item{lambda_g_lst}{candidate set of the tuning parameter for alpha,
-(corresponds to sqrt(N)*lambdalambda_g in the SHIR paper)
+(corresponds to lambda_g in the SHIR paper)
 If not specified or specified as Null by the user, it will be set as c(0.6,0.9).}
 
 \item{tune}{the information criterion used for model selection:

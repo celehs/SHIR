@@ -9,7 +9,7 @@ Local_fit(Y, X, lambda_lst = NULL)
 \arguments{
 \item{Y}{individual response vector}
 
-\item{X}{individual covariates matrices}
+\item{X}{individual covariates matrix}
 
 \item{lambda_lst}{candidate set of tuning parameters
 If not specified or specified as Null by the user, choose the default range in glmnet.}
