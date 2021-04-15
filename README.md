@@ -32,8 +32,7 @@ parameters, and attains consistent variable selection.
 
 ## Flowchart
 
-![Algorithm
-flowchart](./figures/Flowchart_SHIR.png)
+![Algorithm flowchart](man/figures/Flowchart_SHIR.png)
 
 ## Installation
 

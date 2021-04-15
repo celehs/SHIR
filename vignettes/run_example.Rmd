@@ -2,7 +2,7 @@
 title: "Example on a simulated dataset"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{run_example}
+  %\VignetteIndexEntry{Example on a simulated dataset}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---

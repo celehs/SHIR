@@ -35,7 +35,7 @@ The procedure SHIR  protects individual data through summary-statistics-based in
 
 
 ## Flowchart
-![Algorithm flowchart](./figures/Flowchart_SHIR.png) 
+![Algorithm flowchart](man/figures/Flowchart_SHIR.png) 
 
 ## Installation
 
