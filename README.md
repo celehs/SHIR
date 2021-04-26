@@ -72,6 +72,3 @@ Journal of the American Statistical Association, (just-accepted), 1-34.
 <https://www.tandfonline.com/doi/abs/10.1080/01621459.2021.1904958>
 
 
-<script type="text/javascript" async
-
-src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
