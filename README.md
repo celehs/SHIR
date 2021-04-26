@@ -34,7 +34,11 @@ parameters, and attains consistent variable selection.
 
 ![Algorithm flowchart](man/figures/Flowchart_SHIR.png)
 
+To train and summarize the raw data at each local site, we fit:
+
 ![equ](https://latex.codecogs.com/gif.latex?log(y)=\beta_0&space;&plus;&space;\beta_1&space;x&space;&plus;&space;u)
+
+$$\sqrt{2}$$
 
 ## Installation
 
@@ -66,3 +70,8 @@ Cai, T., Liu, M., & Xia, Y. (2021). Individual data protected
 integrative regression analysis of high-dimensional heterogeneous data.
 Journal of the American Statistical Association, (just-accepted), 1-34.
 <https://www.tandfonline.com/doi/abs/10.1080/01621459.2021.1904958>
+
+
+<script type="text/javascript" async
+
+src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
