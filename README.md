@@ -34,6 +34,10 @@ parameters, and attains consistent variable selection.
 
 ![Algorithm flowchart](man/figures/Flowchart_SHIR.png)
 
+```math
+\frac{\sigma}{\sqrt{n}}
+```
+
 ## Installation
 
 <!-- You can install the stable version of SHIR from [CRAN](https://CRAN.R-project.org) with: -->
