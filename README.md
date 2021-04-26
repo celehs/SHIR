@@ -34,7 +34,7 @@ parameters, and attains consistent variable selection.
 
 ![Algorithm flowchart](man/figures/Flowchart_SHIR.png)
 
-```math
+``` math
 \frac{\sigma}{\sqrt{n}}
 ```
 
