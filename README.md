@@ -58,9 +58,17 @@ and transfer them to the center node for integrative analysis.
 
 ### To aggregate the summary data
 
-At the center node, we decompose
+At the center node, we decompose the coefficients into the mean effect and heterogeneous effect:
+
+<!--  -->
 
 
+and fit 
+
+<!--  -->
+
+
+to obtain the integrative SHIR estimator. Please see more details from the SHIR paper linked below.
 
 ## Installation
 
