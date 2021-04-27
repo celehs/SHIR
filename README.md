@@ -34,6 +34,8 @@ parameters, and attains consistent variable selection.
 
 ![Algorithm flowchart](man/figures/Flowchart_SHIR.png)
 
+## Key Steps
+
 ### To derive the local individual data
 
 At each local site m with indivdual level data (the response vector and design matrix):
