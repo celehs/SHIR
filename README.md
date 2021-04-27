@@ -59,9 +59,10 @@ and transfer them to the center node for integrative analysis.
 
 ### To aggregate the summary data
 
-At the center node, we decompose the coefficients into the mean effect and heterogeneous effect:
+At the center node, we decompose the coefficients into mean effects and heterogeneous effects:
 
 <!--  -->
+
 
 
 and fit 
