@@ -34,21 +34,21 @@ parameters, and attains consistent variable selection.
 
 ![Algorithm flowchart](man/figures/Flowchart_SHIR.png)
 
-#### To derive the local individual data
+### To derive the local individual data
 
-At each local site m with indivdual level data 
+At each local site m with indivdual level data (response and design matrix):
 
-
+<a href="https://www.codecogs.com/eqnedit.php?latex=D^{\sf&space;\scriptscriptstyle&space;(m)}=(Y^{\sf&space;\scriptscriptstyle&space;(m)},X^{\sf&space;\scriptscriptstyle&space;(m)})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D^{\sf&space;\scriptscriptstyle&space;(m)}=(Y^{\sf&space;\scriptscriptstyle&space;(m)},X^{\sf&space;\scriptscriptstyle&space;(m)})" title="D^{\sf \scriptscriptstyle (m)}=(Y^{\sf \scriptscriptstyle (m)},X^{\sf \scriptscriptstyle (m)})" /></a>
 
 we fit lasso:
 
-<!-- \widehat\beta_{\sf \scriptscriptstyle LASSO}^{\sf \scriptscriptstyle (m)}={\rm argmin}_{\beta}\widehat L(Y^{\sf \scriptscriptstyle (m)};X^{\sf \scriptscriptstyle (m)}\beta)+\lambda_m\|\beta_{-1}\|_1>
+<!-- \widehat\beta_{\sf \scriptscriptstyle LASSO}^{\sf \scriptscriptstyle (m)}={\rm argmin}_{\beta}\widehat L(Y^{\sf \scriptscriptstyle (m)};X^{\sf \scriptscriptstyle (m)}\beta)+\lambda_m\|\beta_{-1}\|_1 -->
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\widehat\beta_{\sf&space;\scriptscriptstyle&space;LASSO}^{\sf&space;\scriptscriptstyle&space;(m)}={\rm&space;argmin}_{\beta}\widehat&space;L(Y^{\sf&space;\scriptscriptstyle&space;(m)};X^{\sf&space;\scriptscriptstyle&space;(m)}\beta)&plus;\lambda_m\|\beta_{-1}\|_1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\widehat\beta_{\sf&space;\scriptscriptstyle&space;LASSO}^{\sf&space;\scriptscriptstyle&space;(m)}={\rm&space;argmin}_{\beta}\widehat&space;L(Y^{\sf&space;\scriptscriptstyle&space;(m)};X^{\sf&space;\scriptscriptstyle&space;(m)}\beta)&plus;\lambda_m\|\beta_{-1}\|_1" title="\widehat\beta_{\sf \scriptscriptstyle LASSO}^{\sf \scriptscriptstyle (m)}={\rm argmin}_{\beta}\widehat L(Y^{\sf \scriptscriptstyle (m)};X^{\sf \scriptscriptstyle (m)}\beta)+\lambda_m\|\beta_{-1}\|_1," /></a>
 
 and
 
-#### To aggregate the summary data
+### To aggregate the summary data
 
 
 ## Installation
