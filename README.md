@@ -65,7 +65,7 @@ At the center node, we decompose the coefficients into mean effects and heteroge
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\{\mu,\alpha^{(\bullet)}\}~\mbox{where}~\alpha^{(\bullet)}=(\alpha^{\sf&space;\scriptscriptstyle&space;(1)},...,\alpha^{\sf&space;\scriptscriptstyle&space;(M)}),~\beta^{\sf&space;\scriptscriptstyle&space;(m)}=\mu&plus;\alpha^{\sf&space;\scriptscriptstyle&space;(m)},~\alpha^{\sf&space;\scriptscriptstyle&space;(1)}&plus;\cdots&plus;\alpha^{\sf&space;\scriptscriptstyle&space;(M)}=0," target="_blank"><img src="https://latex.codecogs.com/gif.latex?\{\mu,\alpha^{(\bullet)}\}~\mbox{where}~\alpha^{(\bullet)}=(\alpha^{\sf&space;\scriptscriptstyle&space;(1)},...,\alpha^{\sf&space;\scriptscriptstyle&space;(M)}),~\beta^{\sf&space;\scriptscriptstyle&space;(m)}=\mu&plus;\alpha^{\sf&space;\scriptscriptstyle&space;(m)},~\alpha^{\sf&space;\scriptscriptstyle&space;(1)}&plus;\cdots&plus;\alpha^{\sf&space;\scriptscriptstyle&space;(M)}=0," title="\{\mu,\alpha^{(\bullet)}\}~\mbox{where}~\alpha^{(\bullet)}=(\alpha^{\sf \scriptscriptstyle (1)},...,\alpha^{\sf \scriptscriptstyle (M)}),~\beta^{\sf \scriptscriptstyle (m)}=\mu+\alpha^{\sf \scriptscriptstyle (m)},~\alpha^{\sf \scriptscriptstyle (1)}+\cdots+\alpha^{\sf \scriptscriptstyle (M)}=0," /></a>
 
-and fit
+and fit the quadratic-approximated integrative regression:
 
 <!-- \{\widehat\mu_{\sf \scriptscriptstyle SHIR},\widehat\alpha^{(\bullet)}_{\sf \scriptscriptstyle SHIR}\}={\rm argmin}_{\mu,\alpha^{(\bullet)}}N^{-1} \sum_{m=1}^M n_mQ_m(\mu,\alpha^{\sf \scriptscriptstyle (m)})+\lambda(\|\mu_{-1}\|_1+\lambda_g\|\alpha^{(\bullet)}_{-1}\|_{2,1}), -->
 
