@@ -38,7 +38,7 @@ To train and summarize the raw data at each local site, we fit:
 
 ![equ](https://latex.codecogs.com/gif.latex?log(y)=\beta_0&space;&plus;&space;\beta_1&space;x&space;&plus;&space;u)
 
-$$\sqrt{2}$$
+<a href="https://www.codecogs.com/eqnedit.php?latex=\widehat\beta_{\sf&space;\scriptscriptstyle&space;LASSO}^{\sf&space;\scriptscriptstyle&space;(m)}={\rm&space;argmin}_{\beta}\widehat&space;L(Y^{\sf&space;\scriptscriptstyle&space;(m)};X^{\sf&space;\scriptscriptstyle&space;(m)}\beta)&plus;\lambda_m\|\beta_{-1}\|_1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\widehat\beta_{\sf&space;\scriptscriptstyle&space;LASSO}^{\sf&space;\scriptscriptstyle&space;(m)}={\rm&space;argmin}_{\beta}\widehat&space;L(Y^{\sf&space;\scriptscriptstyle&space;(m)};X^{\sf&space;\scriptscriptstyle&space;(m)}\beta)&plus;\lambda_m\|\beta_{-1}\|_1" title="\widehat\beta_{\sf \scriptscriptstyle LASSO}^{\sf \scriptscriptstyle (m)}={\rm argmin}_{\beta}\widehat L(Y^{\sf \scriptscriptstyle (m)};X^{\sf \scriptscriptstyle (m)}\beta)+\lambda_m\|\beta_{-1}\|_1" /></a>
 
 ## Installation
 
