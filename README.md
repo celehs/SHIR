@@ -50,9 +50,10 @@ we fit lasso:
 
 to obtain the summary data (the sample size, hessian matrix, and gradient):
 
-<!--  -->
+<!-- \{n_m,\widehat H_m,\widehat g_m\},\quad\mbox{where}\quad\widehat H_m=\nabla^2\widehat L_m(\widehat\beta_{\sf \scriptscriptstyle LASSO}^{\sf \scriptscriptstyle (m)});\quad\widehat g_m=\widehat H_m\widehat\beta_{\sf \scriptscriptstyle LASSO}^{\sf \scriptscriptstyle (m)}-\nabla\widehat L_m(\widehat\beta_{\sf \scriptscriptstyle LASSO}^{\sf \scriptscriptstyle (m)}), -->
 
 
+<a href="https://www.codecogs.com/eqnedit.php?latex=\{n_m,\widehat&space;H_m,\widehat&space;g_m\},\quad\mbox{where}\quad\widehat&space;H_m=\nabla^2\widehat&space;L_m(\widehat\beta_{\sf&space;\scriptscriptstyle&space;LASSO}^{\sf&space;\scriptscriptstyle&space;(m)});\quad\widehat&space;g_m=\widehat&space;H_m\widehat\beta_{\sf&space;\scriptscriptstyle&space;LASSO}^{\sf&space;\scriptscriptstyle&space;(m)}-\nabla\widehat&space;L_m(\widehat\beta_{\sf&space;\scriptscriptstyle&space;LASSO}^{\sf&space;\scriptscriptstyle&space;(m)})," target="_blank"><img src="https://latex.codecogs.com/gif.latex?\{n_m,\widehat&space;H_m,\widehat&space;g_m\},\quad\mbox{where}\quad\widehat&space;H_m=\nabla^2\widehat&space;L_m(\widehat\beta_{\sf&space;\scriptscriptstyle&space;LASSO}^{\sf&space;\scriptscriptstyle&space;(m)});\quad\widehat&space;g_m=\widehat&space;H_m\widehat\beta_{\sf&space;\scriptscriptstyle&space;LASSO}^{\sf&space;\scriptscriptstyle&space;(m)}-\nabla\widehat&space;L_m(\widehat\beta_{\sf&space;\scriptscriptstyle&space;LASSO}^{\sf&space;\scriptscriptstyle&space;(m)})," title="\{n_m,\widehat H_m,\widehat g_m\},\quad\mbox{where}\quad\widehat H_m=\nabla^2\widehat L_m(\widehat\beta_{\sf \scriptscriptstyle LASSO}^{\sf \scriptscriptstyle (m)});\quad\widehat g_m=\widehat H_m\widehat\beta_{\sf \scriptscriptstyle LASSO}^{\sf \scriptscriptstyle (m)}-\nabla\widehat L_m(\widehat\beta_{\sf \scriptscriptstyle LASSO}^{\sf \scriptscriptstyle (m)})," /></a>
 
 and transfer them to the center node for integrative analysis.
 
@@ -68,7 +69,7 @@ and fit
 <!--  -->
 
 
-to obtain the integrative SHIR estimator. Please see more details from the SHIR paper linked in the citation section.
+to obtain the SHIR estimator. Please see more details from the SHIR paper linked in the citation section.
 
 ## Installation
 
