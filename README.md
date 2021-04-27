@@ -34,7 +34,7 @@ parameters, and attains consistent variable selection.
 
 ![Algorithm flowchart](man/figures/Flowchart_SHIR.png)
 
-## Key Steps
+## Key steps
 
 ### To derive the local individual data
 
