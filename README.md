@@ -61,9 +61,9 @@ and transfer them to the center node for integrative analysis.
 
 At the center node, we decompose the coefficients into mean effects and heterogeneous effects:
 
-<!--  -->
+<!-- \{\mu,\alpha^{(\bullet)}\},\quad\mbox{where}~\alpha^{(\bullet)}=\{\alpha^{\sf \scriptscriptstyle (1)},...,\alpha^{\sf \scriptscriptstyle (M)}\},~\beta^{\sf \scriptscriptstyle (m)}=\mu+\alpha^{\sf \scriptscriptstyle (m)},~\alpha^{\sf \scriptscriptstyle (1)}+\cdots+\alpha^{\sf \scriptscriptstyle (M)}=0, -->
 
-
+<a href="https://www.codecogs.com/eqnedit.php?latex=\{\mu,\alpha^{(\bullet)}\},\quad\mbox{where}~\alpha^{(\bullet)}=\{\alpha^{\sf&space;\scriptscriptstyle&space;(1)},...,\alpha^{\sf&space;\scriptscriptstyle&space;(M)}\},~\beta^{\sf&space;\scriptscriptstyle&space;(m)}=\mu&plus;\alpha^{\sf&space;\scriptscriptstyle&space;(m)},~\alpha^{\sf&space;\scriptscriptstyle&space;(1)}&plus;\cdots&plus;\alpha^{\sf&space;\scriptscriptstyle&space;(M)}=0," target="_blank"><img src="https://latex.codecogs.com/gif.latex?\{\mu,\alpha^{(\bullet)}\},\quad\mbox{where}~\alpha^{(\bullet)}=\{\alpha^{\sf&space;\scriptscriptstyle&space;(1)},...,\alpha^{\sf&space;\scriptscriptstyle&space;(M)}\},~\beta^{\sf&space;\scriptscriptstyle&space;(m)}=\mu&plus;\alpha^{\sf&space;\scriptscriptstyle&space;(m)},~\alpha^{\sf&space;\scriptscriptstyle&space;(1)}&plus;\cdots&plus;\alpha^{\sf&space;\scriptscriptstyle&space;(M)}=0," title="\{\mu,\alpha^{(\bullet)}\},\quad\mbox{where}~\alpha^{(\bullet)}=\{\alpha^{\sf \scriptscriptstyle (1)},...,\alpha^{\sf \scriptscriptstyle (M)}\},~\beta^{\sf \scriptscriptstyle (m)}=\mu+\alpha^{\sf \scriptscriptstyle (m)},~\alpha^{\sf \scriptscriptstyle (1)}+\cdots+\alpha^{\sf \scriptscriptstyle (M)}=0," /></a>
 
 and fit 
 
