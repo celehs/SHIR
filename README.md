@@ -68,7 +68,7 @@ and fit
 <!--  -->
 
 
-to obtain the integrative SHIR estimator. Please see more details from the SHIR paper linked below.
+to obtain the integrative SHIR estimator. Please see more details from the SHIR paper linked in the citation section.
 
 ## Installation
 
