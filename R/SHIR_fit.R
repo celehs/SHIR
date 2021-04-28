@@ -1,4 +1,4 @@
-#' SHIR_fit: aggregate the locally derived summary data using the proposed method in SHIR paper.
+#' Aggregate the locally derived summary data using the proposed method in SHIR paper.
 #'
 #' @param H_lst list of locally derived Hessian matrix
 #' @param d_lst list of locally derived gradient vector

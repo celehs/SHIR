@@ -100,7 +100,7 @@ devtools::install_github("celehs/SHIR")
 ## Getting started
 
 Follow the main steps displayed in the
-[example](file:///Users/clara-lea/Documents/GitHub/SHIR/docs/articles/run_example.html),
+[example](articles/run_example.html),
 in which we apply SHIR to a simulated dataset.
 
 ## Citation

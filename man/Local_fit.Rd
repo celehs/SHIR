@@ -2,7 +2,7 @@
 % Please edit documentation in R/Local_fit.R
 \name{Local_fit}
 \alias{Local_fit}
-\title{Local_fit: Fit lasso and derive summary statistics at each local site.}
+\title{Fit lasso and derive summary statistics at each local site.}
 \usage{
 Local_fit(Y, X, lambda_lst = NULL)
 }
@@ -22,5 +22,5 @@ gradient: derived gradient vector
 beta: local lasso estimator
 }
 \description{
-Local_fit: Fit lasso and derive summary statistics at each local site.
+Fit lasso and derive summary statistics at each local site.
 }

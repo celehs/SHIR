@@ -1,4 +1,4 @@
-#' Local_fit: Fit lasso and derive summary statistics at each local site.
+#' Fit lasso and derive summary statistics at each local site.
 #'
 #' @param Y individual response vector
 #' @param X individual covariates matrix

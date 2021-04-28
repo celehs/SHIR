@@ -3,7 +3,7 @@
 \docType{data}
 \name{simu_data}
 \alias{simu_data}
-\title{Simulated data for SHIR demo}
+\title{Simulated data for the example}
 \format{
 A data list with 5 elements:
 \describe{
@@ -18,6 +18,6 @@ A data list with 5 elements:
 simu_data
 }
 \description{
-Simulated data for SHIR demo
+Simulated data for the example
 }
 \keyword{datasets}

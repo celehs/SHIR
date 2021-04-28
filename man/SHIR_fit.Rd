@@ -2,7 +2,7 @@
 % Please edit documentation in R/SHIR_fit.R
 \name{SHIR_fit}
 \alias{SHIR_fit}
-\title{SHIR_fit: aggregate the locally derived summary data using the proposed method in SHIR paper.}
+\title{Aggregate the locally derived summary data using the proposed method in SHIR paper.}
 \usage{
 SHIR_fit(
   H_lst,
@@ -40,5 +40,5 @@ min.beta: matrices of the fitted SHIR estimator
 the first row is the fitted intercepts)
 }
 \description{
-SHIR_fit: aggregate the locally derived summary data using the proposed method in SHIR paper.
+Aggregate the locally derived summary data using the proposed method in SHIR paper.
 }

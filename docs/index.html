@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SHIR: Data-Shielding High-dimensional Integrative Regression • SHIR</title>
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
+<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/cosmo/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="bootstrap-toc.css">
 <script src="bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
@@ -39,7 +39,7 @@
       <ul class="nav navbar-nav">
 <li>
   <a href="index.html">
-    <span class="fas fa-home fa-lg"></span>
+    <span class="fas fa fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -91,6 +91,37 @@
 <a href="#flowchart" class="anchor"></a>Flowchart</h2>
 <p><img src="reference/figures/Flowchart_SHIR.png" alt="Algorithm flowchart"></p>
 </div>
+<div id="key-steps" class="section level2">
+<h2 class="hasAnchor">
+<a href="#key-steps" class="anchor"></a>Key steps</h2>
+<div id="to-derive-the-local-individual-data" class="section level3">
+<h3 class="hasAnchor">
+<a href="#to-derive-the-local-individual-data" class="anchor"></a>To derive the local individual data</h3>
+<p>At each local site m with indivdual level data (the response vector and design matrix):</p>
+<!-- D^{\sf \scriptscriptstyle (m)}=(Y^{\sf \scriptscriptstyle (m)},X^{\sf \scriptscriptstyle (m)}), -->
+<p><a href="https://www.codecogs.com/eqnedit.php?latex=D%5E%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;(m)%7D=(Y%5E%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;(m)%7D,X%5E%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;(m)%7D)," target="_blank"><img src="https://latex.codecogs.com/gif.latex?D%5E%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;(m)%7D=(Y%5E%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;(m)%7D,X%5E%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;(m)%7D)," title="D^{\sf \scriptscriptstyle (m)}=(Y^{\sf \scriptscriptstyle (m)},X^{\sf \scriptscriptstyle (m)}),"></a></p>
+<p>we fit lasso:</p>
+<!-- \widehat\beta_{\sf \scriptscriptstyle LASSO}^{\sf \scriptscriptstyle (m)}={\rm argmin}_{\beta}\widehat L(Y^{\sf \scriptscriptstyle (m)};X^{\sf \scriptscriptstyle (m)}\beta)+\lambda_m\|\beta_{-1}\|_1 -->
+<p><a href="https://www.codecogs.com/eqnedit.php?latex=%5Cwidehat%5Cbeta_%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;LASSO%7D%5E%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;(m)%7D=%7B%5Crm&amp;space;argmin%7D_%7B%5Cbeta%7D%5Cwidehat&amp;space;L(Y%5E%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;(m)%7D;X%5E%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;(m)%7D%5Cbeta)&amp;plus;%5Clambda_m%5C%7C%5Cbeta_%7B-1%7D%5C%7C_1," target="_blank"><img src="https://latex.codecogs.com/gif.latex?%5Cwidehat%5Cbeta_%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;LASSO%7D%5E%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;(m)%7D=%7B%5Crm&amp;space;argmin%7D_%7B%5Cbeta%7D%5Cwidehat&amp;space;L(Y%5E%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;(m)%7D;X%5E%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;(m)%7D%5Cbeta)&amp;plus;%5Clambda_m%5C%7C%5Cbeta_%7B-1%7D%5C%7C_1" title="\widehat\beta_{\sf \scriptscriptstyle LASSO}^{\sf \scriptscriptstyle (m)}={\rm argmin}_{\beta}\widehat L(Y^{\sf \scriptscriptstyle (m)};X^{\sf \scriptscriptstyle (m)}\beta)+\lambda_m\|\beta_{-1}\|_1"></a></p>
+<p>to obtain the summary data (the sample size, hessian matrix, and gradient):</p>
+<!-- \{n_m,\widehat H_m,\widehat g_m\},\quad\mbox{where}\quad\widehat H_m=\nabla^2\widehat L_m(\widehat\beta_{\sf \scriptscriptstyle LASSO}^{\sf \scriptscriptstyle (m)});\quad\widehat g_m=\widehat H_m\widehat\beta_{\sf \scriptscriptstyle LASSO}^{\sf \scriptscriptstyle (m)}-\nabla\widehat L_m(\widehat\beta_{\sf \scriptscriptstyle LASSO}^{\sf \scriptscriptstyle (m)}), -->
+<p><a href="https://www.codecogs.com/eqnedit.php?latex=%5C%7Bn_m,%5Cwidehat&amp;space;H_m,%5Cwidehat&amp;space;g_m%5C%7D,%5Cquad%5Cmbox%7Bwhere%7D%5Cquad%5Cwidehat&amp;space;H_m=%5Cnabla%5E2%5Cwidehat&amp;space;L_m(%5Cwidehat%5Cbeta_%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;LASSO%7D%5E%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;(m)%7D);%5Cquad%5Cwidehat&amp;space;g_m=%5Cwidehat&amp;space;H_m%5Cwidehat%5Cbeta_%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;LASSO%7D%5E%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;(m)%7D-%5Cnabla%5Cwidehat&amp;space;L_m(%5Cwidehat%5Cbeta_%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;LASSO%7D%5E%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;(m)%7D)," target="_blank"><img src="https://latex.codecogs.com/gif.latex?%5C%7Bn_m,%5Cwidehat&amp;space;H_m,%5Cwidehat&amp;space;g_m%5C%7D,%5Cquad%5Cmbox%7Bwhere%7D%5Cquad%5Cwidehat&amp;space;H_m=%5Cnabla%5E2%5Cwidehat&amp;space;L_m(%5Cwidehat%5Cbeta_%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;LASSO%7D%5E%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;(m)%7D);%5Cquad%5Cwidehat&amp;space;g_m=%5Cwidehat&amp;space;H_m%5Cwidehat%5Cbeta_%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;LASSO%7D%5E%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;(m)%7D-%5Cnabla%5Cwidehat&amp;space;L_m(%5Cwidehat%5Cbeta_%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;LASSO%7D%5E%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;(m)%7D)," title="\{n_m,\widehat H_m,\widehat g_m\},\quad\mbox{where}\quad\widehat H_m=\nabla^2\widehat L_m(\widehat\beta_{\sf \scriptscriptstyle LASSO}^{\sf \scriptscriptstyle (m)});\quad\widehat g_m=\widehat H_m\widehat\beta_{\sf \scriptscriptstyle LASSO}^{\sf \scriptscriptstyle (m)}-\nabla\widehat L_m(\widehat\beta_{\sf \scriptscriptstyle LASSO}^{\sf \scriptscriptstyle (m)}),"></a></p>
+<p>and transfer them to the center node for integrative analysis.</p>
+</div>
+<div id="to-aggregate-the-summary-data" class="section level3">
+<h3 class="hasAnchor">
+<a href="#to-aggregate-the-summary-data" class="anchor"></a>To aggregate the summary data</h3>
+<p>At the center node, we decompose the coefficients into mean effects and heterogeneous effects:</p>
+<!-- \{\mu,\alpha^{(\bullet)}\}~\mbox{where}~\alpha^{(\bullet)}=(\alpha^{\sf \scriptscriptstyle (1)},...,\alpha^{\sf \scriptscriptstyle (M)}),~\beta^{\sf \scriptscriptstyle (m)}=\mu+\alpha^{\sf \scriptscriptstyle (m)},~\alpha^{\sf \scriptscriptstyle (1)}+\cdots+\alpha^{\sf \scriptscriptstyle (M)}=0, -->
+<p><a href="https://www.codecogs.com/eqnedit.php?latex=%5C%7B%5Cmu,%5Calpha%5E%7B(%5Cbullet)%7D%5C%7D~%5Cmbox%7Bwhere%7D~%5Calpha%5E%7B(%5Cbullet)%7D=(%5Calpha%5E%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;(1)%7D,...,%5Calpha%5E%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;(M)%7D),~%5Cbeta%5E%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;(m)%7D=%5Cmu&amp;plus;%5Calpha%5E%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;(m)%7D,~%5Calpha%5E%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;(1)%7D&amp;plus;%5Ccdots&amp;plus;%5Calpha%5E%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;(M)%7D=0," target="_blank"><img src="https://latex.codecogs.com/gif.latex?%5C%7B%5Cmu,%5Calpha%5E%7B(%5Cbullet)%7D%5C%7D~%5Cmbox%7Bwhere%7D~%5Calpha%5E%7B(%5Cbullet)%7D=(%5Calpha%5E%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;(1)%7D,...,%5Calpha%5E%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;(M)%7D),~%5Cbeta%5E%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;(m)%7D=%5Cmu&amp;plus;%5Calpha%5E%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;(m)%7D,~%5Calpha%5E%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;(1)%7D&amp;plus;%5Ccdots&amp;plus;%5Calpha%5E%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;(M)%7D=0," title="\{\mu,\alpha^{(\bullet)}\}~\mbox{where}~\alpha^{(\bullet)}=(\alpha^{\sf \scriptscriptstyle (1)},...,\alpha^{\sf \scriptscriptstyle (M)}),~\beta^{\sf \scriptscriptstyle (m)}=\mu+\alpha^{\sf \scriptscriptstyle (m)},~\alpha^{\sf \scriptscriptstyle (1)}+\cdots+\alpha^{\sf \scriptscriptstyle (M)}=0,"></a></p>
+<p>and fit the quadratic-approximated integrative regression:</p>
+<!-- \{\widehat\mu_{\sf \scriptscriptstyle SHIR},\widehat\alpha^{(\bullet)}_{\sf \scriptscriptstyle SHIR}\}={\rm argmin}_{\mu,\alpha^{(\bullet)}}N^{-1} \sum_{m=1}^M n_mQ_m(\mu,\alpha^{\sf \scriptscriptstyle (m)})+\lambda(\|\mu_{-1}\|_1+\lambda_g\|\alpha^{(\bullet)}_{-1}\|_{2,1}), -->
+<!--\mbox{where}\quad Q_m(\mu,\alpha^{\sf \scriptscriptstyle (m)})=(\mu+\alpha^{\sf \scriptscriptstyle (m)})^{\sf \scriptscriptstyle T}\widehat H_m(\mu+\alpha^{\sf \scriptscriptstyle (m)}) -2\widehat g_m^{\sf \scriptscriptstyle T}(\mu+\alpha^{\sf \scriptscriptstyle (m)}) -->
+<p><a href="https://www.codecogs.com/eqnedit.php?latex=%5C%7B%5Cwidehat%5Cmu_%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;SHIR%7D,%5Cwidehat%5Calpha%5E%7B(%5Cbullet)%7D_%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;SHIR%7D%5C%7D=%7B%5Crm&amp;space;argmin%7D_%7B%5Cmu,%5Calpha%5E%7B(%5Cbullet)%7D%7DN%5E%7B-1%7D&amp;space;%5Csum_%7Bm=1%7D%5EM&amp;space;n_mQ_m(%5Cmu,%5Calpha%5E%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;(m)%7D)&amp;plus;%5Clambda(%5C%7C%5Cmu_%7B-1%7D%5C%7C_1&amp;plus;%5Clambda_g%5C%7C%5Calpha%5E%7B(%5Cbullet)%7D_%7B-1%7D%5C%7C_%7B2,1%7D)," target="_blank"><img src="https://latex.codecogs.com/gif.latex?%5C%7B%5Cwidehat%5Cmu_%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;SHIR%7D,%5Cwidehat%5Calpha%5E%7B(%5Cbullet)%7D_%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;SHIR%7D%5C%7D=%7B%5Crm&amp;space;argmin%7D_%7B%5Cmu,%5Calpha%5E%7B(%5Cbullet)%7D%7DN%5E%7B-1%7D&amp;space;%5Csum_%7Bm=1%7D%5EM&amp;space;n_mQ_m(%5Cmu,%5Calpha%5E%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;(m)%7D)&amp;plus;%5Clambda(%5C%7C%5Cmu_%7B-1%7D%5C%7C_1&amp;plus;%5Clambda_g%5C%7C%5Calpha%5E%7B(%5Cbullet)%7D_%7B-1%7D%5C%7C_%7B2,1%7D)," title="\{\widehat\mu_{\sf \scriptscriptstyle SHIR},\widehat\alpha^{(\bullet)}_{\sf \scriptscriptstyle SHIR}\}={\rm argmin}_{\mu,\alpha^{(\bullet)}}N^{-1} \sum_{m=1}^M n_mQ_m(\mu,\alpha^{\sf \scriptscriptstyle (m)})+\lambda(\|\mu_{-1}\|_1+\lambda_g\|\alpha^{(\bullet)}_{-1}\|_{2,1}),"></a></p>
+<p><a href="https://www.codecogs.com/eqnedit.php?latex=%5Cmbox%7Bwhere%7D%5Cquad&amp;space;Q_m(%5Cmu,%5Calpha%5E%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;(m)%7D)=(%5Cmu&amp;plus;%5Calpha%5E%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;(m)%7D)%5E%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;T%7D%5Cwidehat&amp;space;H_m(%5Cmu&amp;plus;%5Calpha%5E%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;(m)%7D)&amp;space;-2%5Cwidehat&amp;space;g_m%5E%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;T%7D(%5Cmu&amp;plus;%5Calpha%5E%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;(m)%7D)," target="_blank"><img src="https://latex.codecogs.com/gif.latex?%5Cmbox%7Bwhere%7D%5Cquad&amp;space;Q_m(%5Cmu,%5Calpha%5E%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;(m)%7D)=(%5Cmu&amp;plus;%5Calpha%5E%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;(m)%7D)%5E%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;T%7D%5Cwidehat&amp;space;H_m(%5Cmu&amp;plus;%5Calpha%5E%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;(m)%7D)&amp;space;-2%5Cwidehat&amp;space;g_m%5E%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;T%7D(%5Cmu&amp;plus;%5Calpha%5E%7B%5Csf&amp;space;%5Cscriptscriptstyle&amp;space;(m)%7D)," title="\mbox{where}\quad Q_m(\mu,\alpha^{\sf \scriptscriptstyle (m)})=(\mu+\alpha^{\sf \scriptscriptstyle (m)})^{\sf \scriptscriptstyle T}\widehat H_m(\mu+\alpha^{\sf \scriptscriptstyle (m)}) -2\widehat g_m^{\sf \scriptscriptstyle T}(\mu+\alpha^{\sf \scriptscriptstyle (m)}),"></a></p>
+<p>to obtain the SHIR estimator. Please see more details from the SHIR paper linked in the citation section.</p>
+</div>
+</div>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
@@ -99,14 +130,15 @@
 <!-- install.packages("SHIR") -->
 <!-- ``` -->
 <p>The development version of this package can be installed from <a href="https://github.com/">GitHub</a> with:</p>
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># install.packages("devtools")</span>
-<span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span><span class="op">(</span><span class="st">"celehs/SHIR"</span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit">
+<span class="co"># install.packages("devtools")</span>
+<span class="kw">devtools</span>::<span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span>(<span class="st">"celehs/SHIR"</span>)
+</pre></div>
 </div>
 <div id="getting-started" class="section level2">
 <h2 class="hasAnchor">
 <a href="#getting-started" class="anchor"></a>Getting started</h2>
-<p>Follow the main steps displayed in the <a href="file:///Users/clara-lea/Documents/GitHub/SHIR/docs/articles/run_example.html">example</a>, in which we apply SHIR to a simulated dataset.</p>
+<p>Follow the main steps displayed in the <a href="articles/run_example.html">example</a>, in which we apply SHIR to a simulated dataset.</p>
 </div>
 <div id="citation" class="section level2">
 <h2 class="hasAnchor">
@@ -143,7 +175,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.9000.</p>
 </div>
 
       </footer>

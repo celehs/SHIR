@@ -1,4 +1,4 @@
-#' Simulated data for SHIR demo
+#'Simulated data for the example
 #'
 #' @format A data list with 5 elements:
 #' \describe{
