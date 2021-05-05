@@ -1,13 +1,13 @@
-#' Fit lasso and derive summary statistics at each local site.
+#' Fits lasso and derives summary statistics at each local site.
 #'
-#' @param Y individual response vector
-#' @param X individual covariates matrix
-#' @param lambda_lst candidate set of tuning parameters
-#' If not specified or specified as Null by the user, choose the default range in glmnet.
+#' @param Y Individual response vector.
+#' @param X Individual covariates matrix.
+#' @param lambda_lst Candidate set of tuning parameters.
+#' Default value is range in glmnet.
 #'
-#' @return hessian: derived Hessian matrix
-#' @return gradient: derived gradient vector
-#' @return beta: local lasso estimator
+#' @return hessian: Derived Hessian matrix.
+#' @return gradient: Derived gradient vector.
+#' @return beta: Local lasso estimator.
 #'
 #' @export
 Local_fit <- function(Y, X, lambda_lst = NULL){

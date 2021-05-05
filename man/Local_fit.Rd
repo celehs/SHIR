@@ -2,25 +2,25 @@
 % Please edit documentation in R/Local_fit.R
 \name{Local_fit}
 \alias{Local_fit}
-\title{Fit lasso and derive summary statistics at each local site.}
+\title{Fits lasso and derives summary statistics at each local site.}
 \usage{
 Local_fit(Y, X, lambda_lst = NULL)
 }
 \arguments{
-\item{Y}{individual response vector}
+\item{Y}{Individual response vector}
 
-\item{X}{individual covariates matrix}
+\item{X}{Individual covariates matrix}
 
-\item{lambda_lst}{candidate set of tuning parameters
-If not specified or specified as Null by the user, choose the default range in glmnet.}
+\item{lambda_lst}{Candidate set of tuning parameters.
+Default value is range in glmnet.}
 }
 \value{
-hessian: derived Hessian matrix
+hessian: Derived Hessian matrix
 
-gradient: derived gradient vector
+gradient: Derived gradient vector
 
-beta: local lasso estimator
+beta: Local lasso estimator
 }
 \description{
-Fit lasso and derive summary statistics at each local site.
+Fits lasso and derives summary statistics at each local site.
 }

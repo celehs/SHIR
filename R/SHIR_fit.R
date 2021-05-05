@@ -1,27 +1,27 @@
-#' Aggregate the locally derived summary data using the proposed method in SHIR paper.
+#' Aggregates the locally derived summary data using the proposed method SHIR.
 #'
-#' @param H_lst list of locally derived Hessian matrix
-#' @param d_lst list of locally derived gradient vector
-#' @param n_lst vector of the sample sizes at local sites
-#' @param lambda_lst candidate set of the tuning parameter for mu,
-#' (corresponds to sqrt(N)lambda in the SHIR paper)
-#' If not specified or specified as Null by the user, it will be set as 0.3*c(5:25)sqrt(nlog(p)).
+#' @param H_lst List of locally derived Hessian matrices.
+#' @param d_lst List of locally derived gradient vectors.
+#' @param n_lst Vector containing the sample size at each local site.
+#' @param lambda_lst Candidate set of the tuning parameters for mu.
+#' It corresponds to sqrt(N)lambda in the SHIR paper.
+#' If not specified or specified as NULL by the user, default value is 0.3*c(5:25)sqrt(nlog(p)).
 #'
-#' @param lambda_g_lst candidate set of the tuning parameter for alpha,
-#' (corresponds to lambda_g in the SHIR paper)
-#' If not specified or specified as Null by the user, it will be set as c(0.6,0.9).
+#' @param lambda_g_lst Candidate set of the tuning parameter for alpha.
+#' It corresponds to lambda_g in the SHIR paper.
+#' If not specified or specified as NULL by the user, default value is c(0.6, 0.9).
 #'
-#' @param tune the information criterion used for model selection:
-#' options include 'AIC', 'BIC', 'mBIC' and 'RIC', which put different weights on the degree of freedom.
-#' If not specified by the user, it will be set as 'BIC'.
+#' @param tune Information criterion used for model selection.
+#' Input options include 'AIC', 'BIC', 'mBIC' and 'RIC', which put different weights on the degree of freedom.
+#' If not specified by the user, default value is 'BIC'.
 #'
 #' @importFrom Matrix bdiag
 #' @importFrom grplasso grplasso LinReg
 #'
-#' @return min.lambda: the selected tuning parameters with the minimum information criterion
-#' @return min.beta: matrices of the fitted SHIR estimator
-#' (the m-th column loads the fitted coefficient (beta) for the m-th site,
-#' the first row is the fitted intercepts)
+#' @return min.lambda: Selected tuning parameters with the minimum information criterion.
+#' @return min.beta: Matrices of the fitted SHIR estimator.
+#' The m-th column contains the fitted coefficient beta of the m-th site, and
+#' the first row contains the fitted intercepts.
 #' @export
 #'
 SHIR_fit <- function(H_lst, d_lst, n_lst, lambda_lst = NULL,

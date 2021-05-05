@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Aggregate the locally derived summary data using the proposed method in SHIR paper. — SHIR_fit • SHIR</title>
+<title>Aggregates the locally derived summary data using the proposed method SHIR. — SHIR_fit • SHIR</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,8 @@
 
 
 
-<meta property="og:title" content="Aggregate the locally derived summary data using the proposed method in SHIR paper. — SHIR_fit" />
-<meta property="og:description" content="Aggregate the locally derived summary data using the proposed method in SHIR paper." />
+<meta property="og:title" content="Aggregates the locally derived summary data using the proposed method SHIR. — SHIR_fit" />
+<meta property="og:description" content="Aggregates the locally derived summary data using the proposed method SHIR." />
 
 
 
@@ -115,13 +115,13 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Aggregate the locally derived summary data using the proposed method in SHIR paper.</h1>
+    <h1>Aggregates the locally derived summary data using the proposed method SHIR.</h1>
     
     <div class="hidden name"><code>SHIR_fit.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Aggregate the locally derived summary data using the proposed method in SHIR paper.</p>
+    <p>Aggregates the locally derived summary data using the proposed method SHIR.</p>
     </div>
 
     <pre class="usage"><span class='fu'>SHIR_fit</span>(
@@ -138,42 +138,42 @@
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>H_lst</th>
-      <td><p>list of locally derived Hessian matrix</p></td>
+      <td><p>List of locally derived Hessian matrices</p></td>
     </tr>
     <tr>
       <th>d_lst</th>
-      <td><p>list of locally derived gradient vector</p></td>
+      <td><p>List of locally derived gradient vectors</p></td>
     </tr>
     <tr>
       <th>n_lst</th>
-      <td><p>vector of the sample sizes at local sites</p></td>
+      <td><p>Vector containing the sample size of each local site</p></td>
     </tr>
     <tr>
       <th>lambda_lst</th>
-      <td><p>candidate set of the tuning parameter for mu,
-(corresponds to sqrt(N)lambda in the SHIR paper)
-If not specified or specified as Null by the user, it will be set as 0.3*c(5:25)sqrt(nlog(p)).</p></td>
+      <td><p>Candidate set of the tuning parameters for mu.
+It corresponds to sqrt(N)lambda in the SHIR paper.
+If not specified or specified as NULL by the user, default value is 0.3*c(5:25)sqrt(nlog(p)).</p></td>
     </tr>
     <tr>
       <th>lambda_g_lst</th>
-      <td><p>candidate set of the tuning parameter for alpha,
-(corresponds to lambda_g in the SHIR paper)
-If not specified or specified as Null by the user, it will be set as c(0.6,0.9).</p></td>
+      <td><p>Candidate set of the tuning parameter for alpha.
+It corresponds to lambda_g in the SHIR paper.
+If not specified or specified as NULL by the user, default value is c(0.6, 0.9).</p></td>
     </tr>
     <tr>
       <th>tune</th>
-      <td><p>the information criterion used for model selection:
-options include 'AIC', 'BIC', 'mBIC' and 'RIC', which put different weights on the degree of freedom.
-If not specified by the user, it will be set as 'BIC'.</p></td>
+      <td><p>Information criterion used for model selection.
+Input options include 'AIC', 'BIC', 'mBIC' and 'RIC', which put different weights on the degree of freedom.
+If not specified by the user, default value is 'BIC'.</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>min.lambda: the selected tuning parameters with the minimum information criterion</p>
-<p>min.beta: matrices of the fitted SHIR estimator
-(the m-th column loads the fitted coefficient (beta) for the m-th site,
-the first row is the fitted intercepts)</p>
+    <p>min.lambda: Selected tuning parameters with the minimum information criterion.</p>
+<p>min.beta: Matrices of the fitted SHIR estimator.
+The m-th column contains the fitted coefficient beta of the m-th site, and
+the first row contains the fitted intercepts.</p>
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

@@ -1,4 +1,4 @@
-#'Simulated data for the example
+#'Generates simulated the data for the example.
 #'
 #' @format A data list with 5 elements:
 #' \describe{
@@ -8,4 +8,4 @@
 #'   \item{mu}{vector of the true mu (homogeneous effect)}
 #'   \item{alpha}{list of true alpha (heterogeneous effect) of the local sites}
 #' }
-"simu_data"
+"simu_data()"
