@@ -14,11 +14,11 @@ SHIR_fit(
 )
 }
 \arguments{
-\item{H_lst}{List of locally derived Hessian matrices}
+\item{H_lst}{List of locally derived Hessian matrices.}
 
-\item{d_lst}{List of locally derived gradient vectors}
+\item{d_lst}{List of locally derived gradient vectors.}
 
-\item{n_lst}{Vector containing the sample size of each local site}
+\item{n_lst}{Vector containing the sample size at each local site.}
 
 \item{lambda_lst}{Candidate set of the tuning parameters for mu.
 It corresponds to sqrt(N)lambda in the SHIR paper.

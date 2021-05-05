@@ -7,19 +7,19 @@
 Local_fit(Y, X, lambda_lst = NULL)
 }
 \arguments{
-\item{Y}{Individual response vector}
+\item{Y}{Individual response vector.}
 
-\item{X}{Individual covariates matrix}
+\item{X}{Individual covariates matrix.}
 
 \item{lambda_lst}{Candidate set of tuning parameters.
 Default value is range in glmnet.}
 }
 \value{
-hessian: Derived Hessian matrix
+hessian: Derived Hessian matrix.
 
-gradient: Derived gradient vector
+gradient: Derived gradient vector.
 
-beta: Local lasso estimator
+beta: Local lasso estimator.
 }
 \description{
 Fits lasso and derives summary statistics at each local site.
