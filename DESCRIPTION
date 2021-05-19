@@ -3,7 +3,7 @@ Title: SHIR: Data-Shielding High-dimensional Integrative Regression
 Version: 0.1.0
 Authors@R: c(
     person(given = "Molei", family = "Liu", role = c("aut"),email = "molei_liu@g.harvard.edu"),
-    person(given = "Tianxi", family = "Cai", role = c("aut"), email = "first.last@example.com"),
+    person(given = "Tianxi", family = "Cai", role = c("aut"), email = "tcai@hsph.harvard.edu"),
     person(given = "Clara-Lea", family = "Bonzel", role = c("aut"), email = "clbonzel@hsph.harvard.edu"),
     person(family = "PARSE LTD", role = c("aut","cre"), email = "software@parse-health.org")
     )
