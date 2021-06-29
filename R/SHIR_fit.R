@@ -97,11 +97,7 @@ SHIR_fit <- function(H_lst, d_lst, n_lst, lambda_lst = NULL,
 
       lambda_g <- lambda_g * lambda
       penscale <- function(x){
-        if (x == 1){
-          return(1)
-        }else{
-          return(lambda_g / lambda)
-        }
+        ifelse(x == 1, 1, lambda_g / lambda)
       }
 
       Y_ <- 0
