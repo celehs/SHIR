@@ -1,5 +1,5 @@
 Package: SHIR
-Title: SHIR: Data-Shielding High-dimensional Integrative Regression
+Title: Data-Shielding High-Dimensional Integrative Regression (SHIR)
 Version: 0.1.0
 Authors@R: c(
     person(given = "Molei", family = "Liu", role = c("aut"),email = "molei_liu@g.harvard.edu"),
